@@ -18,5 +18,23 @@ add_action( 'after_setup_theme', 'mylife31_setup' );
  */
 function mylife31_setup()
 {
-    // TODO - Here goes your custom functionality...
+    /*
+     * declare WooCommerce support
+     */
+
+    add_theme_support( 'woocommerce' );
+
+    /*
+     * scripts and styles
+     */
+
+    add_action( 'wp_enqueue_scripts', 'mylife31_enqueue_styles' );
+}
+
+/**
+ * Enqueue Styles
+ */
+function mylife31_enqueue_styles()
+{
+    wp_enqueue_style( 'mylife31-parent', trailingslashit( get_template_directory_uri() ) . 'style.css' );
 }
