@@ -1,0 +1,24 @@
+Vagrant.configure("2") do |config|
+
+  config.vm.box = "trsenna/gozma12/wp"
+
+  config.vm.hostname = "th2wc-blueprints"
+  config.vm.network "private_network", ip: "192.168.27.12"
+
+  config.vm.synced_folder "..", "/vagrant"
+
+  # Provision
+
+  #config.vm.provision "shell", path: "https://raw.githubusercontent.com/trsenna/gozma12/0.3.0/cli/core.sh"
+  #config.vm.provision "shell", path: "https://raw.githubusercontent.com/trsenna/gozma12/0.3.0/cli/lamp.sh"
+  #config.vm.provision "shell", path: "https://raw.githubusercontent.com/trsenna/gozma12/0.3.0/cli/lapp.sh"
+
+  # Local Provision
+
+  #config.vm.provision "shell", path: "bootstrap.sh"
+
+  # Cookbook Provision
+
+  #config.vm.provision "shell", path: "https://raw.githubusercontent.com/trsenna/gozma12-cookbook/0.2.0/book/recipes/php5DEV-env.sh"
+
+end
