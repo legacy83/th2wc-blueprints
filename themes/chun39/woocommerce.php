@@ -4,7 +4,11 @@
 
         <div class="hfeed">
 
-            <?php woocommerce_content(); ?>
+            <div class="hfeed-inner">
+
+                <?php woocommerce_content(); ?>
+
+            </div>
 
         </div>
         <!-- .hfeed -->
