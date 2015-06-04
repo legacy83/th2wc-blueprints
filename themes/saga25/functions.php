@@ -12,11 +12,24 @@
  */
 
 add_action( 'after_setup_theme', 'saga25_setup' );
+add_action( 'after_setup_theme', 'saga25_wc_setup' );
 
 /**
  * The Theme Setup
  */
 function saga25_setup()
+{
+    /*
+     * scripts and styles
+     */
+
+    add_action( 'wp_enqueue_scripts', 'saga25_enqueue_styles' );
+}
+
+/**
+ * The WC Setup
+ */
+function saga25_wc_setup()
 {
     /*
      * declare WooCommerce support
@@ -25,10 +38,9 @@ function saga25_setup()
     add_theme_support( 'woocommerce' );
 
     /*
-     * scripts and styles
+     * remove the wc pagination
      */
-
-    add_action( 'wp_enqueue_scripts', 'saga25_enqueue_styles' );
+    remove_action( 'woocommerce_after_shop_loop', 'woocommerce_pagination', 10 );
 }
 
 /**

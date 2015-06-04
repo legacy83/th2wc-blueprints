@@ -26,3 +26,11 @@
     padding-right: 100px;
     padding-top: 1.5rem;
 }
+
+.woocommerce span.onsale {
+    z-index: 10;
+}
+
+.woocommerce .quantity .qty {
+    padding: 10px 0.5rem;
+}
