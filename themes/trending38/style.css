@@ -1,0 +1,28 @@
+/**
+ * Theme Name:  Trending 38
+ * Theme URI:   https://github.com/trsenna/th2wc-blueprints
+ * Description: Just one more child-theme for Trending.
+ *
+ * Version:     0.1.0
+ * Author:      Thiago Senna
+ * Author URI:  http://thremes.com.br
+ *
+ * Template:            trending
+ * Template Version:    0.3
+ *
+ * License:     GNU General Public License v2.0 or later
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ */
+
+.woocommerce .hfeed-inner {
+    margin: 0 0 25px;
+    padding: 25px 25px 0;
+    background: #FFF none repeat scroll 0 0;
+    border: 1px dotted #5394A8;
+    border-bottom-style: solid;
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    border-image: none;
+}
