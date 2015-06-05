@@ -27,6 +27,42 @@
     padding-top: 1.5rem;
 }
 
+@media only screen and ( min-width: 900px ) {
+
+    .woocommerce.plural .content-inner {
+        max-width: 750px;
+        margin: 0 auto;
+    }
+
+}
+
+@media only screen and ( max-width: 850px ) {
+
+    .woocommerce .content-inner {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+}
+
+@media only screen and ( max-width: 480px ) {
+
+    .woocommerce .content-inner {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+
+}
+
+@media only screen and ( min-width: 480px ) {
+
+    .woocommerce.plural .content-inner {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+}
+
 .woocommerce span.onsale {
     z-index: 10;
 }
