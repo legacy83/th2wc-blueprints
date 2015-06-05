@@ -20,10 +20,10 @@ add_action( 'after_setup_theme', 'stargazer09_wc_setup' );
 function stargazer09_setup()
 {
     /*
-     * declare WooCommerce support
+     * scripts and styles
      */
 
-    add_theme_support( 'woocommerce' );
+    add_action( 'wp_enqueue_scripts', 'stargazer09_enqueue_styles' );
 }
 
 /**
