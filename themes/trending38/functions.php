@@ -12,11 +12,24 @@
  */
 
 add_action( 'after_setup_theme', 'trending38_setup' );
+add_action( 'after_setup_theme', 'trending38_wc_setup' );
 
 /**
  * The Theme Setup
  */
 function trending38_setup()
+{
+    /*
+     * scripts and styles
+     */
+
+    add_action( 'wp_enqueue_scripts', 'trending38_enqueue_styles' );
+}
+
+/**
+ * The WC Setup
+ */
+function trending38_wc_setup()
 {
     /*
      * declare WooCommerce support
@@ -25,10 +38,10 @@ function trending38_setup()
     add_theme_support( 'woocommerce' );
 
     /*
-     * scripts and styles
+     * no wc pagination
      */
 
-    add_action( 'wp_enqueue_scripts', 'trending38_enqueue_styles' );
+    remove_action( 'woocommerce_after_shop_loop', 'woocommerce_pagination', 10 );
 }
 
 /**

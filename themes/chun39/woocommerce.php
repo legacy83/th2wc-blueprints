@@ -13,6 +13,8 @@
         </div>
         <!-- .hfeed -->
 
+        <?php get_template_part( 'loop-nav' ); ?>
+
     </div><!-- #content -->
 
 <?php get_footer(); // Loads the footer.php template. ?>

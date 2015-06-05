@@ -15,6 +15,8 @@
 
         <?php do_atomic( 'close_content' ); // my-life_close_content ?>
 
+        <?php get_template_part( 'loop-nav' ); ?>
+
     </div><!-- #content -->
 
 <?php do_atomic( 'after_content' ); // my-life_after_content ?>

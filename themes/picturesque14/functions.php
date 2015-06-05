@@ -12,11 +12,24 @@
  */
 
 add_action( 'after_setup_theme', 'picturesque14_setup' );
+add_action( 'after_setup_theme', 'picturesque14_wc_setup' );
 
 /**
  * The Theme Setup
  */
 function picturesque14_setup()
+{
+    /*
+     * scripts and styles
+     */
+
+    add_action( 'wp_enqueue_scripts', 'picturesque14_enqueue_styles' );
+}
+
+/**
+ * The WC Setup
+ */
+function picturesque14_wc_setup()
 {
     /*
      * declare WooCommerce support
@@ -25,10 +38,10 @@ function picturesque14_setup()
     add_theme_support( 'woocommerce' );
 
     /*
-     * scripts and styles
+     * no wc pagination
      */
 
-    add_action( 'wp_enqueue_scripts', 'picturesque14_enqueue_styles' );
+    remove_action( 'woocommerce_after_shop_loop', 'woocommerce_pagination', 10 );
 }
 
 /**

@@ -19,6 +19,8 @@
 
         <?php do_atomic( 'close_content' ); // retro-fitted_close_content ?>
 
+        <?php get_template_part( 'loop-nav' ); ?>
+
     </div><!-- #content -->
 
 <?php do_atomic( 'after_content' ); // retro-fitted_after_content ?>

@@ -12,11 +12,24 @@
  */
 
 add_action( 'after_setup_theme', 'mylife31_setup' );
+add_action( 'after_setup_theme', 'mylife31_wc_setup' );
 
 /**
  * The Theme Setup
  */
 function mylife31_setup()
+{
+    /*
+     * scripts and styles
+     */
+
+    add_action( 'wp_enqueue_scripts', 'mylife31_enqueue_styles' );
+}
+
+/**
+ * The WC Setup
+ */
+function mylife31_wc_setup()
 {
     /*
      * declare WooCommerce support
@@ -25,10 +38,10 @@ function mylife31_setup()
     add_theme_support( 'woocommerce' );
 
     /*
-     * scripts and styles
+     * no wc pagination
      */
 
-    add_action( 'wp_enqueue_scripts', 'mylife31_enqueue_styles' );
+    remove_action( 'woocommerce_after_shop_loop', 'woocommerce_pagination', 10 );
 }
 
 /**
