@@ -12,6 +12,7 @@
  */
 
 add_action( 'after_setup_theme', 'stargazer09_setup' );
+add_action( 'after_setup_theme', 'stargazer09_wc_setup' );
 
 /**
  * The Theme Setup
@@ -23,12 +24,24 @@ function stargazer09_setup()
      */
 
     add_theme_support( 'woocommerce' );
+}
 
+/**
+ * The WC Setup
+ */
+function stargazer09_wc_setup()
+{
     /*
-     * scripts and styles
+     * declare WooCommerce support
      */
 
-    add_action( 'wp_enqueue_scripts', 'stargazer09_enqueue_styles' );
+    add_theme_support( 'woocommerce' );
+
+    /*
+     * no wc pagination
+     */
+
+    remove_action( 'woocommerce_after_shop_loop', 'woocommerce_pagination', 10 );
 }
 
 /**
