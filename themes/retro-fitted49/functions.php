@@ -12,24 +12,11 @@
  */
 
 add_action( 'after_setup_theme', 'retrofitted49_setup' );
-add_action( 'after_setup_theme', 'retrofitted49_wc_setup' );
 
 /**
  * The Theme Setup
  */
 function retrofitted49_setup()
-{
-    /*
-     * scripts and styles
-     */
-
-    add_action( 'wp_enqueue_scripts', 'retrofitted49_enqueue_styles' );
-}
-
-/**
- * The WC Setup
- */
-function retrofitted49_wc_setup()
 {
     /*
      * declare WooCommerce support
@@ -38,10 +25,10 @@ function retrofitted49_wc_setup()
     add_theme_support( 'woocommerce' );
 
     /*
-     * no wc pagination
+     * scripts and styles
      */
 
-    remove_action( 'woocommerce_after_shop_loop', 'woocommerce_pagination', 10 );
+    add_action( 'wp_enqueue_scripts', 'retrofitted49_enqueue_styles' );
 }
 
 /**
