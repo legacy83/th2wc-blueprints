@@ -4,7 +4,10 @@
 
         <div class="content-inner">
 
-            <?php woocommerce_content(); ?>
+            <?php
+            remove_action( 'woocommerce_after_shop_loop', 'woocommerce_pagination', 10 );
+            woocommerce_content();
+            ?>
 
         </div>
 
