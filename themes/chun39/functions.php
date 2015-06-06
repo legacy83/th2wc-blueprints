@@ -36,12 +36,6 @@ function chun39_wc_setup()
      */
 
     add_theme_support( 'woocommerce' );
-
-    /*
-     * no wc pagination
-     */
-
-    remove_action( 'woocommerce_after_shop_loop', 'woocommerce_pagination', 10 );
 }
 
 /**
